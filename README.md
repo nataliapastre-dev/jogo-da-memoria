@@ -7,8 +7,8 @@
 </p>
 
 
-🔗 **Acesse o jogo:**  
-👉 https://nataliapastre-dev.github.io/jogo-da-memoria/
+## 👉 **Acesse o jogo**
+[🎮 Clique aqui para jogar o Jogo da Memória](https://nataliapastre-dev.github.io/jogo-da-memoria/)
 
 ---
 

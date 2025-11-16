@@ -1,6 +1,11 @@
+
+
 # 🎮 Jogo da Memória
 
-![Prévia do Jogo](https://i.postimg.cc/C1HZ9cQk/68747470733a2f2f692e706f7374696d672e63632f38634c424a6e53432f436170747572612d64652d74656c612d32303235.png)
+<p align="center">
+  <img src="https://i.postimg.cc/C1HZ9cQk/68747470733a2f2f692e706f7374696d672e63632f38634c424a6e53432f436170747572612d64652d74656c612d32303235.png" width="450">
+</p>
+
 
 🔗 **Acesse o jogo:**  
 👉 https://nataliapastre-dev.github.io/jogo-da-memoria/

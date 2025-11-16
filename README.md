@@ -1,6 +1,6 @@
 # 🎮 Jogo da Memória
 
-![Prévia do Jogo](https://i.postimg.cc/xTPRLRjJ/Chat-GPT-Image-16-de-nov-de-2025-09-28-49.png)
+![Prévia do Jogo](https://i.postimg.cc/C1HZ9cQk/68747470733a2f2f692e706f7374696d672e63632f38634c424a6e53432f436170747572612d64652d74656c612d32303235.png)
 
 🔗 **Acesse o jogo:**  
 👉 https://nataliapastre-dev.github.io/jogo-da-memoria/
@@ -11,10 +11,10 @@
 
 Este jogo da memória foi desenvolvido como prática no **curso Serfrontend**, disponível na plataforma **Udemy**.  
 
-Fiz algumas melhorias para deixá-lo mais moderno e visualmente atraente, utilizando apenas **HTML e CSS**, incluindo efeitos em **3D usando transformações CSS**.
+Fiz melhorias para deixá-lo mais moderno e visualmente atraente, utilizando apenas **HTML e CSS**, com efeitos de **transformação 3D** nas cartas.
 
 O objetivo do jogo é encontrar os pares virando as cartas.  
-A interação foi criada de forma inovadora utilizando **checkboxes + CSS**, sem necessidade de JavaScript, tornando o projeto **leve, eficiente e excelente para aprendizado**.
+A interação foi construída de forma inovadora utilizando **checkboxes + CSS**, sem necessidade de JavaScript, tornando o projeto **leve, eficiente e excelente para aprendizado**.
 
 ---
 
@@ -47,5 +47,6 @@ A interação foi criada de forma inovadora utilizando **checkboxes + CSS**, sem
 
 ---
 
-## 📁 Estrutura do Projeto
+
+
 

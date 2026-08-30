@@ -1,3 +1,4 @@
+```css
 /* =======================
    RESET / BASE
 ======================= */
@@ -112,6 +113,33 @@ input[type="checkbox"]:checked + label .card-inner {
 }
 
 /* =======================
+   BOTÃO REINICIAR
+======================= */
+
+#restartButton {
+  margin: 0 auto 25px;
+  display: block;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#restartButton:hover {
+  background-color: #162d6b;
+  transform: scale(1.05);
+}
+
+#restartButton:active {
+  transform: scale(0.97);
+}
+
+/* =======================
    FOOTER
 ======================= */
 
@@ -131,6 +159,7 @@ input[type="checkbox"]:checked + label .card-inner {
   h1 {
     font-size: 2.3rem;
   }
+
   .card {
     width: 115px;
     height: 160px;
@@ -183,3 +212,4 @@ input[type="checkbox"]:checked + label .card-inner {
     height: 115px;
   }
 }
+```

@@ -1,4 +1,4 @@
-```html
+html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -13,10 +13,16 @@
   <main class="game-board">
     <h1>Jogo da Memória</h1>
 
-    <button id="restartButton" type="button">🔄 Reiniciar jogo</button>
+    <div class="game-info">
+      <p>Movimentos: <strong id="moves">0</strong></p>
+
+      <button id="restartButton" type="button">
+        🔄 Reiniciar jogo
+      </button>
+    </div>
 
     <section class="cards-container">
-      <!-- Cada carta agora tem data-card="nome-da-fruta" -->
+      <!-- Cada carta possui data-card para identificar o par -->
 
       <!-- Maçã 1 -->
       <input type="checkbox" id="card1" hidden />
@@ -158,4 +164,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-```
+

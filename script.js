@@ -1,13 +1,20 @@
-```javascript id="3y6q2m"
+javascript
 const cards = document.querySelectorAll(".card");
 const restartButton = document.querySelector("#restartButton");
+const movesElement = document.querySelector("#moves");
 
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
 let matches = 0;
+let moves = 0;
 
-// Função de virar
+// Atualizar contador de movimentos
+function updateMoves() {
+  movesElement.textContent = moves;
+}
+
+// Função de virar carta
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -20,6 +27,11 @@ function flipCard() {
   }
 
   secondCard = this;
+
+  // Cada segunda carta escolhida representa uma tentativa
+  moves++;
+  updateMoves();
+
   checkMatch();
 }
 
@@ -34,7 +46,9 @@ function checkMatch() {
 
     if (matches === 5) {
       setTimeout(() => {
-        alert("🎉 Parabéns! Você completou o Jogo da Memória!");
+        alert(
+          `🎉 Parabéns! Você completou o Jogo da Memória em ${moves} movimentos!`
+        );
       }, 300);
     }
   } else {
@@ -57,11 +71,12 @@ function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
+
     resetBoard();
   }, 900);
 }
 
-// Resetar variáveis
+// Resetar variáveis da rodada
 function resetBoard() {
   firstCard = null;
   secondCard = null;
@@ -80,6 +95,7 @@ function shuffleCards() {
 function restartGame() {
   cards.forEach(card => {
     card.classList.remove("flip");
+
     card.removeEventListener("click", flipCard);
     card.addEventListener("click", flipCard);
   });
@@ -88,16 +104,20 @@ function restartGame() {
   secondCard = null;
   lockBoard = false;
   matches = 0;
+  moves = 0;
 
+  updateMoves();
   shuffleCards();
 }
 
 // Clique em cada carta
-cards.forEach(card => card.addEventListener("click", flipCard));
+cards.forEach(card => {
+  card.addEventListener("click", flipCard);
+});
 
 // Botão de reiniciar
 restartButton.addEventListener("click", restartGame);
 
 // Embaralhamento inicial
 shuffleCards();
-```
+

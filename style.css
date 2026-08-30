@@ -1,4 +1,4 @@
-```css
+css
 /* =======================
    RESET / BASE
 ======================= */
@@ -36,11 +36,60 @@ body {
 }
 
 h1 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 2.8rem;
   font-weight: 800;
   color: #1e3a8a;
   letter-spacing: -1px;
+}
+
+/* =======================
+   INFORMAÇÕES DO JOGO
+======================= */
+
+.game-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.game-info p {
+  color: #1e3a8a;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.game-info strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* =======================
+   BOTÃO REINICIAR
+======================= */
+
+#restartButton {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+#restartButton:hover {
+  background-color: #162d6b;
+  transform: scale(1.05);
+}
+
+#restartButton:active {
+  transform: scale(0.97);
 }
 
 /* =======================
@@ -65,7 +114,7 @@ h1 {
   perspective: 1100px;
   cursor: pointer;
   user-select: none;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .card:active {
@@ -76,7 +125,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform .65s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform-style: preserve-3d;
 }
 
@@ -85,6 +134,7 @@ input[type="checkbox"]:checked + label .card-inner {
 }
 
 /* Frente e verso */
+
 .card-front,
 .card-back {
   position: absolute;
@@ -113,33 +163,6 @@ input[type="checkbox"]:checked + label .card-inner {
 }
 
 /* =======================
-   BOTÃO REINICIAR
-======================= */
-
-#restartButton {
-  margin: 0 auto 25px;
-  display: block;
-  padding: 10px 22px;
-  border: none;
-  border-radius: 8px;
-  background-color: #1e3a8a;
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-#restartButton:hover {
-  background-color: #162d6b;
-  transform: scale(1.05);
-}
-
-#restartButton:active {
-  transform: scale(0.97);
-}
-
-/* =======================
    FOOTER
 ======================= */
 
@@ -155,6 +178,7 @@ input[type="checkbox"]:checked + label .card-inner {
 ======================= */
 
 /* Tablets e celulares grandes */
+
 @media (max-width: 760px) {
   h1 {
     font-size: 2.3rem;
@@ -167,9 +191,27 @@ input[type="checkbox"]:checked + label .card-inner {
 }
 
 /* Celulares padrão */
+
 @media (max-width: 550px) {
+  .game-board {
+    padding: 25px 15px;
+  }
+
   h1 {
     font-size: 2rem;
+  }
+
+  .game-info {
+    gap: 12px;
+  }
+
+  .game-info p {
+    font-size: 1rem;
+  }
+
+  #restartButton {
+    font-size: 0.95rem;
+    padding: 9px 18px;
   }
 
   .cards-container {
@@ -183,8 +225,14 @@ input[type="checkbox"]:checked + label .card-inner {
   }
 }
 
-/* iPhones pequenos (iPhone SE, Androids menores) */
+/* iPhones pequenos e Androids menores */
+
 @media (max-width: 420px) {
+  .game-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .cards-container {
     gap: 12px;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
@@ -200,7 +248,8 @@ input[type="checkbox"]:checked + label .card-inner {
   }
 }
 
-/* Ultra pequenos (galaxy pocket e similares) */
+/* Ultra pequenos */
+
 @media (max-width: 350px) {
   .cards-container {
     gap: 10px;
@@ -211,5 +260,14 @@ input[type="checkbox"]:checked + label .card-inner {
     width: 85px;
     height: 115px;
   }
+
+  .game-board {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
 }
-```
+
+
